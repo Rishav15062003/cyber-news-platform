@@ -149,3 +149,20 @@ Some sources may not expose valid RSS endpoints. Those can appear down until HTM
 - Add authentication and per-user persistence
 - Add robust source-specific parsers/scrapers with retry/rate control
 - Containerize services and add observability (metrics/logging/tracing)
+
+## Changelog
+
+### v1.0.0
+
+- Initial public release of CyberPulse
+- Local-first backend + web + mobile architecture
+- Trusted-source aggregation, deduplication, ranking, and incident clustering
+- AI brief modes (quick/technical) and CVE enrichment support
+- User personalization, bookmarks, digest generation, and SSE alerts
+- Source health dashboard and runtime source enable/disable controls
+- News refresh cadence updated to randomized 5-10 minutes with next refresh visibility
+
+## Release
+
+- Current stable release: `v1.0.0`
+- GitHub Releases: [https://github.com/Rishav15062003/cyber-news-platform/releases](https://github.com/Rishav15062003/cyber-news-platform/releases)
