@@ -1,0 +1,25 @@
+node_modules/
+dist/
+.expo/
+.env
+.env.*
+*.log
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build artifacts
+coverage/
+*.tmp
+*.cache
+
+# Mobile generated/native build outputs
+mobile/android/
+mobile/eas-inspect/
+mobile/.gradle/
+
+# Local runtime data
+backend/data/store.json

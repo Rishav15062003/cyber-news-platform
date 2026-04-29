@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "CyberPulse Mobile",
+    "slug": "cyberpulse-mobile",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.cyberpulse.mobile"
+    },
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0f31c786-e421-48bd-8845-52dc9b2588e6"
+      }
+    },
+    "owner": "rishavrajput"
+  }
+}
