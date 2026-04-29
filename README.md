@@ -1,11 +1,35 @@
 # CyberPulse
 
-CyberPulse is a local-first cybersecurity news intelligence platform that aggregates trusted cyber feeds, scores and clusters incidents, and presents actionable updates in a compact UI.
+> Real-time cybersecurity news intelligence for analysts, SOC teams, and security leaders.
 
-It includes:
+CyberPulse is a local-first cybersecurity news platform that aggregates trusted feeds, scores and clusters incidents, and turns noisy headlines into clear, actionable intelligence.
+
+[![Release](https://img.shields.io/github/v/release/Rishav15062003/cyber-news-platform)](https://github.com/Rishav15062003/cyber-news-platform/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/Rishav15062003/cyber-news-platform)](https://github.com/Rishav15062003/cyber-news-platform/commits/main)
+
+## Why CyberPulse?
+
+- Cut through cyber news overload with incident-level clustering
+- See confidence and source reliability, not just headlines
+- Get AI briefs (quick + technical) per story
+- Stay local-first: run everything on your own machine
+- Start in minutes, no cloud deployment required
+
+## What you get
+
+CyberPulse includes:
 - `backend` - Node.js/Express API for ingestion, enrichment, ranking, clustering, and personalization
 - `web` - React/Vite dashboard for analysts and security teams
 - `mobile` - React Native (Expo) app consuming the same backend APIs
+
+## Quick preview
+
+- Live feed of trusted cybersecurity stories
+- AI Brief panel on click (quick + technical summary)
+- CVE enrichment for stories that mention vulnerabilities
+- Incident bars like: "Same incident reported by N sources"
+- Source health dashboard with per-source status and errors
+- Personalized filters by severity, category, source, role, risk profile
 
 ## Key capabilities
 
@@ -25,6 +49,13 @@ It includes:
   - quiet hours
 - SSE alerts stream (`/api/alerts/stream`) for critical and digest events
 - Local persistence in `backend/data/store.json`
+
+## Ideal for
+
+- SOC analysts who need fast triage context
+- Threat intel teams tracking multi-source incidents
+- Security leaders who want concise, high-confidence updates
+- Learners and builders exploring cyber intelligence pipelines
 
 ## Refresh behavior (important)
 
@@ -103,6 +134,14 @@ npx expo start
 
 If testing on physical device, update `API_BASE_URL` in `mobile/App.js` to your machine LAN IP.
 
+## First 5 minutes (recommended path)
+
+1. Start backend and web
+2. Open the web app and click `Refresh now`
+3. Open any story title to view `AI Brief`
+4. Toggle `Sort: time (newest first)` and apply source filters
+5. Open `Source Health` to validate feed quality
+
 ## API overview
 
 - `GET /api/health`
@@ -121,6 +160,12 @@ If testing on physical device, update `API_BASE_URL` in `mobile/App.js` to your 
 - `DELETE /api/users/:userId/bookmarks/:itemId`
 - `GET /api/users/:userId/bookmarks/export?format=markdown|csv`
 - `POST /api/users/:userId/digest`
+
+## Example API call
+
+```bash
+curl "http://localhost:4000/api/news?limit=20&sort=time_desc&severity=critical"
+```
 
 ## Local-first notes
 
@@ -141,6 +186,14 @@ Some sources may not expose valid RSS endpoints. Those can appear down until HTM
   - Disable unstable/non-RSS sources from the UI
 - **Web not connecting**
   - Verify `VITE_API_BASE_URL` and restart web dev server
+
+## Contributing
+
+Contributions are welcome. A good first contribution:
+- add a trusted source
+- improve source parsing reliability
+- improve UI clarity for analysts
+- add tests for ranking/clustering logic
 
 ## Production hardening roadmap
 
